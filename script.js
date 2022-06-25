@@ -38,10 +38,10 @@ function initialize() {
     view.style.display = 'block';
     hidden.style.display = 'none';
     body.style.backgroundColor = "beige";
-    nav1.volume = 0.1;
-    loading_sound.volume = 0.07;
-    welcome.volume = 0.2;
-    bgm.volume = 0.1;
+    nav1.volume = 0.3;
+    loading_sound.volume = 0.14;
+    welcome.volume = 0.4;
+    bgm.volume = 0.2;
 }
 
 function landing_button() {
