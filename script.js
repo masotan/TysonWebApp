@@ -38,8 +38,8 @@ function initialize() {
     view.style.display = 'block';
     hidden.style.display = 'none';
     body.style.backgroundColor = "beige";
-    nav1.volume = 0.3;
-    loading_sound.volume = 0.14;
+    nav1.volume = 0.4;
+    loading_sound.volume = 0.34;
     welcome.volume = 0.4;
     bgm.volume = 0.2;
 }
