@@ -153,11 +153,11 @@
         <h1>Main</h1>
         <div id="menu">
             <ul>
-                <li onclick="to_about_page()" onmouseenter="nav1.play()">About</li>
-                <li onclick="to_photos_page()">Photos</li>
-                <li onclick="to_portfolio_page()">Portfolio</li>
-                <li onclick="to_resume_page()">Resume</li>
-                <li onclick="to_contact_page()">Contact</li>
+                <li onclick="to_about_page()" onmouseenter="playSound(nav1)">About</li>
+                <li onclick="to_photos_page(); rickroll.play()" onmouseenter="playSound(nav1)">Photos</li>
+                <li onclick="to_portfolio_page()" onmouseenter="playSound(nav1)">Portfolio</li>
+                <li onclick="to_resume_page()" onmouseenter="playSound(nav1)">Resume</li>
+                <li onclick="to_contact_page()" onmouseenter="playSound(nav1)">Contact</li>
             </ul>
 
             
@@ -178,7 +178,13 @@
 <!--Photos Page Div-->
     <div id="photos_page" class="page">
         <h1>Photos</h1>
-        <button onclick="to_main_page()">Back</button>
+        <button onclick="exit_photos_page()">Back</button>
+
+        <video id="rickroll" controls>
+            <source src="rickroll.mp4" type="video/mp4">
+
+        </video>
+
     </div>
 
 <!--Portfolio Page Div-->

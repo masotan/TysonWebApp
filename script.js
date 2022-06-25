@@ -26,6 +26,10 @@ let loading_sound = document.querySelector("#loading_sound");
 let welcome = document.querySelector("#welcome");
 let bgm = document.querySelector("#bgm");
 
+// Video
+
+let rickroll = document.querySelector("#rickroll");
+
 // Functions
 
 
@@ -34,6 +38,10 @@ function initialize() {
     view.style.display = 'block';
     hidden.style.display = 'none';
     body.style.backgroundColor = "beige";
+    nav1.volume = 0.1;
+    loading_sound.volume = 0.07;
+    welcome.volume = 0.2;
+    bgm.volume = 0.1;
 }
 
 function landing_button() {
@@ -79,6 +87,7 @@ function to_about_page() {
 function to_photos_page() {
     view.appendChild(photos_page);
     hidden.appendChild(main_page);
+    bgm.muted = true;
 }
 
 function to_portfolio_page() {
@@ -105,9 +114,31 @@ function to_main_page() {
     view.appendChild(main_page);
 }
 
+function exit_photos_page() {
+    rickroll.pause();
+    hidden.appendChild(photos_page);
+    view.appendChild(main_page);
+    bgm.muted = false;
+}
+
+function playSound(audio) {
+    audio.currentTime = 0;
+    audio.play();
+
+}
 
 
 
-// Run code
+// Run code and debug
 
 initialize();
+
+
+//debugging code here
+
+/*
+view.appendChild(nav1);
+view.appendChild(loading_sound);
+view.appendChild(welcome);
+view.appendChild(bgm);
+*/

@@ -63,24 +63,26 @@ span {
         font-weight: 600;
         text-transform: uppercase;
         animation-name: in;
-        animation-duration: 2s;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        transform: translateY(200px);
     }
     
     @keyframes in {
       0% { 
             opacity: 0;
-            transform: translateY(500px) rotate(50deg);
+            transform: translateY(50px) rotate(83deg);
         }
         100% { 
             opacity: 1;
-            transform: translateY(0) rotate(0);
+            transform: translateY(200px) rotate(0);
         }
     }
 
 
 #main_page {
     animation-name: fade-in;
-    animation-duration: 5s;
+    animation-duration: 2s;
 
 }
 
@@ -89,6 +91,19 @@ span {
 #about_page {}
 
 #photos_page {}
+
+
+#rickroll {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 
 #portfolio_page {}
 
