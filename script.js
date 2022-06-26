@@ -3,7 +3,9 @@
 
 // Getting Elements and Pages
 
+let landing_page_exit = 0;
 let main_loaded = 0;
+
 
 // let main_menu =  document.querySelector("#menu");
 let body = document.querySelector("body");
@@ -45,11 +47,13 @@ function initialize() {
 }
 
 function landing_button() {
+    landing_page_exit = 1;
     landing_page.remove(); /*deletes landing*/
     body.style.backgroundColor = "black";
     view.appendChild(loading_page); /*renders loading screen*/
     nav1.play();
     loading_sound.play();
+
     
     
     
@@ -73,7 +77,7 @@ function load_done() {
         bgm.play();
         view.appendChild(main_page); // add a delay
         body.style.backgroundColor = "white"; //changes the body background to white
-    }, 4000);
+    }, 2000);
 }
 
 
@@ -132,7 +136,6 @@ function playSound(audio) {
 // Run code and debug
 
 initialize();
-
 
 //debugging code here
 
